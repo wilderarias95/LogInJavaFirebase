@@ -24,4 +24,9 @@ public class LogInModel implements ILogInMVP.Model{
     public void userLogInUnSuccessful() {
         presenter.userLogInUnSuccessful();
     }
+
+    @Override
+    public boolean isUserLoged() {
+        return repository.isUserAuthenticated();
+    }
 }

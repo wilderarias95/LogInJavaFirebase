@@ -3,4 +3,8 @@
     <string name="log_in">log in</string>
     <string name="email">Email</string>
     <string name="password">Password</string>
+    <string name="write_rt_database">Write RT Database</string>
+    <string name="read_rt_database">Read RT Database</string>
+    <string name="update_rt_child">Update Child</string>
+    <string name="remove_rt_child">Remove child</string>
 </resources>

@@ -15,6 +15,7 @@ public interface ILogInMVP {
     interface PresenterView{
 
         void clickedLogIn();
+        boolean isUserLoged();
     }
 
     interface PresenterModel{
@@ -28,5 +29,6 @@ public interface ILogInMVP {
         void sendData(String email, String password);
         void userLogInSuccessful();
         void userLogInUnSuccessful();
+        boolean isUserLoged();
     }
 }

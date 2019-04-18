@@ -36,4 +36,9 @@ class LogInPresenter implements ILogInMVP.PresenterView, ILogInMVP.PresenterMode
     public void userLogInUnSuccessful() {
         view.errorLogInFailed();
     }
+
+    @Override
+    public boolean isUserLoged() {
+        return model.isUserLoged();
+    }
 }

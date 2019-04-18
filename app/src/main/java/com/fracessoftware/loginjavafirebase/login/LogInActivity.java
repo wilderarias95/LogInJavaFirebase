@@ -23,6 +23,9 @@ public class LogInActivity extends AppCompatActivity implements ILogInMVP.View{
 
         presenter = new LogInPresenter(this);
 
+        if (presenter.isUserLoged()){
+            goToMainActivity();
+        }
         Button btnLogIn = findViewById(R.id.btnLogIn);
         btnLogIn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +36,8 @@ public class LogInActivity extends AppCompatActivity implements ILogInMVP.View{
 
         edtEmail=findViewById(R.id.edtEmail);
         edtPassword = findViewById(R.id.edtPassword);
+
+
     }
 
 
@@ -49,13 +54,11 @@ public class LogInActivity extends AppCompatActivity implements ILogInMVP.View{
     @Override
     public void errorEmail() {
         Toast.makeText(this, "Debe ingresar un correo", Toast.LENGTH_LONG).show();
-        edtEmail.setTextColor(getResources().getColor(R.color.colorRed));
     }
 
     @Override
     public void errorPassword() {
         Toast.makeText(this, "Debe ingresar una contraseña", Toast.LENGTH_LONG).show();
-        edtPassword.setTextColor(getResources().getColor(R.color.colorRed));
     }
 
     @Override
